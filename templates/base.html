@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/loadDetails.css' %}">
+</head>
+
+<body>
+    <nav>
+
+        <label for="logo" class="logo">Loaners</label>
+        <ul>
+            <li><a href="{% url 'records:onboarding' %}" class="active">home</a></li>
+            <li><a href="{% url 'records:loandetails' %}">get loan</a></li>
+            <li><a href="">feedback</a></li>
+            <li><a href="" class="logout">logout</a></li>
+
+        </ul>
+    </nav>
+
+    {% block content %}
+
+
+    {% endblock %}
+</body>
+
+</html>
